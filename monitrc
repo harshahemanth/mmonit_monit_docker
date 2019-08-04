@@ -98,7 +98,7 @@
 ## Though, if safety is a concern we recommend instead using https when
 ## communicating with M/Monit and send credentials encrypted.
 #
- set mmonit http://admin:swordfish@172.17.0.4:8080/collector
+ set mmonit http://admin:swordfish@<M/Monit_container_ip>:8080/collector
 #     # and register without credentials     # Don't register credentials
 #
 #
@@ -150,7 +150,7 @@
 #     use address 0.0.0.0  # only accept connection from localhost
 #     allow localhost        # allow localhost to connect to the server and
      allow 0.0.0.0/0.0.0.0
-     allow 172.17.0.3
+     allow <container_ip>
      allow admin:monit      # require user 'admin' with password 'monit'
 #
 ###############################################################################
